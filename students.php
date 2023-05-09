@@ -16,6 +16,8 @@
 
       $result = mysqli_query($conn,$sql);
 
+      $data['content'] .="<form action='deletestudents.php' method='POST'>";
+
       // prepare page content
       $data['content'] .= "<table border='1'>";
       $data['content'] .= "<tr><th colspan='10' align='center'>Students</th></tr>";
@@ -33,6 +35,10 @@
          $data['content'] .= "<td><input type='checkbox' name='delete[$row[studentid]]' /></td></tr>";
       }
       $data['content'] .= "</table>";
+
+      $data['content'] .="<input type='submit' name='deletebtn' value='Delete' />";
+
+      $data['content'] .="</form>";
 
       // render the template
       echo template("templates/default.php", $data);
