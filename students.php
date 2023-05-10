@@ -22,7 +22,7 @@
       $data['content'] .= "<table border='1'>";
       $data['content'] .= "<tr><th colspan='10' align='center'>Students</th></tr>";
       $data['content'] .= "<th>Student ID</th><th>Firstname</th><th>Lastname</th><th>House</th><th>Town</th><th>County</th><th>Country</th><th>Postcode</th>";
-      // Display the modules within the html table
+      // Display student's information inside a table
       while($row = mysqli_fetch_array($result)) {
          $data['content'] .= "<tr><td> $row[studentid] </td>";
          $data['content'] .= "<td> $row[firstname] </td>";
