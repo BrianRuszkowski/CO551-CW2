@@ -41,23 +41,38 @@ if (isset($_SESSION['id'])) {
       $data['content'] = <<<EOD
 
    <h2>My Details</h2>
-   <form name="frmdetails" action="" method="post">
-   First Name :
-   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
-   Surname :
-   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
-   Number and Street :
-   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
-   Town :
-   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
-   County :
-   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
-   Country :
-   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
-   Postcode :
-   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
-   <input type="submit" value="Save" name="submit"/>
-   </form>
+   <form name="frmLogin" action="authenticate.php" method="post">
+  <div class="mb-3">
+    <label for="txtfirstname" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="txtfirstname" name="txtfirstname" value="{$row['firstname']}">
+  </div>
+  <div class="mb-3">
+    <label for="txtlastname" class="form-label">Surname</label>
+    <input type="text" class="form-control" id="txtlastname" name="txtlastname" value="{$row['lastname']}">
+  </div>
+  <div class="mb-3">
+    <label for="txthouse" class="form-label">Number and Street</label>
+    <input type="text" class="form-control" id="txthouse" name="txthouse" value="{$row['house']}">
+  </div>
+  <div class="mb-3">
+    <label for="txttown" class="form-label">Town</label>
+    <input type="text" class="form-control" id="txttown" name="txttown" value="{$row['town']}">
+  </div>
+  <div class="mb-3">
+    <label for="txtcounty" class="form-label">County</label>
+    <input type="text" class="form-control" id="txtcounty" name="txtcounty" value="{$row['county']}">
+  </div>
+  <div class="mb-3">
+    <label for="txtcountry" class="form-label">Country</label>
+    <input type="text" class="form-control" id="txtcountry" name="txtcountry" value="{$row['country']}">
+  </div>
+  <div class="mb-3">
+    <label for="txtpostcode" class="form-label">Postcode</label>
+    <input type="text" class="form-control" id="txtpostcode" name="txtpostcode" value="{$row['postcode']}">
+  </div>
+
+  <input type="submit" name="btnlogin" class="btn btn-primary" value="submit" />
+</form>
 
 EOD;
 

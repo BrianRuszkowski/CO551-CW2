@@ -1,4 +1,6 @@
 
+<h2 class="mt-5">Login Page</h2>
+
 <?php echo $message; ?>
 
 <!-- <form >
@@ -11,7 +13,7 @@
    <input type="submit" value="Login" name="btnlogin" />
 </form> -->
 
-<form name="frmLogin" action="authenticate.php" method="post">
+<form name="frmLogin" action="authenticate.php" method="post" class="mt-5">
   <div class="mb-3">
     <label for="txtid" class="form-label">Student ID</label>
     <input type="text" class="form-control" id="txtid" name="txtid">

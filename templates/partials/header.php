@@ -10,4 +10,3 @@
 
    <body>
 
-   <div class="container">
